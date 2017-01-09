@@ -1,8 +1,9 @@
-function [ toolbar ] = addMenu( mainFigure )
+function addMenu( mainFigure )
     toolbar = uitoolbar(mainFigure);
     uipushtool(toolbar,'TooltipString', 'Upravit seznam objektů', 'ClickedCallback', @debugCallback);
     uipushtool(toolbar,'TooltipString', 'Spustit', 'ClickedCallback', @debugCallback);
     uipushtool(toolbar,'TooltipString', 'Zastavit', 'ClickedCallback', @debugCallback);
+    mainFigure.UserData.menuToolbar = toolbar;
 end
 
 function editObjectCallback(~, ~)

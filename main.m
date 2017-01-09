@@ -5,19 +5,20 @@ function main()
     mainFigure = createMainFigure();
 
     %% Add menu and controls
-    menuToolbar = addMenu(mainFigure);
-    controlsContainer = addControls(mainFigure);
-    initControls(controlsContainer.UserData);
+    addMenu(mainFigure);
+    addControls(mainFigure);
+    initControls(mainFigure.UserData.controlsContainer.UserData);
 
     %% Add 3D axes to plot planets in later
-    visualizationContainer = addVisualizationContainer(mainFigure);
-    initVisualization(visualizationContainer);
+    addVisualizationContainer(mainFigure);
+    initVisualization(mainFigure.UserData.visualizationContainer);
 
     %% Load planets from source file
     % TODO
 
     %% Start planets animation
     % TODO
+    resizeWindowCallback(mainFigure);
 end
 
 function initControls( controls )
