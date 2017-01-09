@@ -11,6 +11,7 @@ function main()
 
     %% Add 3D axes to plot planets in later
     visualizationContainer = addVisualizationContainer(mainFigure);
+    initVisualization(visualizationContainer);
 
     %% Load planets from source file
 
@@ -21,4 +22,11 @@ function initControls( controls )
     set(controls.monthControl, 'String', 1);
     set(controls.dayControl, 'String', 1);
     set(controls.speedControl, 'Value', 1);
+end
+
+function initVisualization( container )
+    ax = subplot(1, 1, 1, 'Parent', container);
+    plot3(ax, 0, 0, 0, 'o', 'Color', 'red');
+    legend('Red circle', 'Location','southeast');
+    grid('on');
 end
