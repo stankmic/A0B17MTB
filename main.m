@@ -14,7 +14,10 @@ function main()
     initVisualization(visualizationContainer);
 
     %% Load planets from source file
+    % TODO
 
+    %% Start planets animation
+    % TODO
 end
 
 function initControls( controls )
@@ -26,7 +29,13 @@ end
 
 function initVisualization( container )
     ax = subplot(1, 1, 1, 'Parent', container);
-    plot3(ax, 0, 0, 0, 'o', 'Color', 'red');
-    legend('Red circle', 'Location','southeast');
-    grid('on');
+    grid(ax, 'on');
+    view(ax, 3);
+    container.UserData.plot = animatedline(ax, 'Marker', 'o', 'Color', 'red');
+    addpoints(container.UserData.plot, 0, 0, 0);
+    drawnow();
+    %hold on;
+    %container.UserData.plotX = plot3(ax, 1, 2, 3, 'o', 'Color', 'blue');
+    %hold off;
+    legend('Red circle', 'Location', 'southeast');
 end
