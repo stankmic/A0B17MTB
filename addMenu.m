@@ -1,4 +1,4 @@
-function addMenu( mainFigure )
+function [ toolbar ] = addMenu( mainFigure )
     toolbar = uitoolbar(mainFigure);
     uipushtool(toolbar,'TooltipString', 'Upravit seznam objektů', 'ClickedCallback', @debugCallback);
     uipushtool(toolbar,'TooltipString', 'Spustit', 'ClickedCallback', @debugCallback);
