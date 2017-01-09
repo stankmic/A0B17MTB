@@ -13,12 +13,19 @@ function main()
     addVisualizationContainer(mainFigure);
     initVisualization(mainFigure.UserData.visualizationContainer);
 
-    %% Load planets from source file
+    %% Initial window size
+    resizeWindowCallback(mainFigure);
+
+    %% Load planets from source file to cell or struct array
     % TODO
+    % for each planet add animatedline
+    % store info necessary for further calculation into UserData
 
     %% Start planets animation
     % TODO
-    resizeWindowCallback(mainFigure);
+    % for each planet add timer, to recalculate position, or one time to
+    % recalculate all positions at once
+
 end
 
 function initControls( controls )
