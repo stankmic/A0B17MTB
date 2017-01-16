@@ -7,7 +7,7 @@ end
 function timeTimerFcn( timeTimer, ~ )
     userData = timeTimer.UserData;
     % increment elapsed days
-    userData.controlsContainer.UserData.elapsedDays = userData.controlsContainer.UserData.elapsedDays + 1;
+    userData.controlsContainer.UserData.currentDate = userData.controlsContainer.UserData.currentDate + days(1);
     
     % set new period based on the speed control
     newPeriod = 0.1/userData.controlsContainer.UserData.speedControl.Value;
