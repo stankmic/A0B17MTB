@@ -4,6 +4,7 @@ function addControls( mainFigure )
     monthControl(container);
     dayControl(container);
     speedControl(container);
+    container.UserData.elapsedDays = 0;
     mainFigure.UserData.controlsContainer = container;
 end
 

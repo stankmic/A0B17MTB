@@ -22,6 +22,7 @@ function main()
     % store info necessary for further calculation into UserData
 
     %% Start planets animation
+    startTimeTimer(mainFigure);
     % TODO
     % for each planet add timer, to recalculate position, or one time to
     % recalculate all positions at once
