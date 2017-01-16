@@ -20,7 +20,9 @@ function main()
 
     %% Start planets animation
     startTimeTimer(mainFigure);
-    addPlanetTimer('Sun', NaN(0), mainFigure, 1 );
+    planetData.name = 'Sun';
+    addPlanetTimer(mainFigure, planetData, 1 );
+    drawnow();
     start(mainFigure.UserData.planetTimers);
     % TODO
     % for each planet add timer, to recalculate position
