@@ -5,5 +5,7 @@ end
 function closeMainFigureCallback( mainFigure, ~ )
     stop(mainFigure.UserData.timeTimer);
     delete(mainFigure.UserData.timeTimer);
+    stop(mainFigure.UserData.planetTimers);
+    delete(mainFigure.UserData.planetTimers);
     delete(gcf);
 end

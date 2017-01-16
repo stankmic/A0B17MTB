@@ -23,6 +23,8 @@ function main()
 
     %% Start planets animation
     startTimeTimer(mainFigure);
+    addPlanetTimer('Sun', NaN(0), mainFigure, 1 );
+    start(mainFigure.UserData.planetTimers);
     % TODO
     % for each planet add timer, to recalculate position, or one time to
     % recalculate all positions at once
