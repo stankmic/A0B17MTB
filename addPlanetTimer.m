@@ -11,7 +11,6 @@ end
 function [ planetLine ] = addPlanetAnimatedLine( planetData )
     % create line
     planetLine = animatedline('Marker', 'o', 'Color', planetData.color);
-    addpoints(planetLine, 0, 0, 0);
 end
 
 function planetTimerFcn( planetTimer, ~ )
