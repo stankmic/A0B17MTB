@@ -49,13 +49,7 @@ function speedControl( container )
     uicontrol(container, 'Units', 'pixel', 'Position', [288 1 64 16], ...
         'Style', 'text', 'String', 'Rychlost:');
     container.UserData.speedControl = uicontrol(container, 'Units', 'pixel', 'Position', [352 1 72 16], 'BackgroundColor', 'white', ...
-        'Style', 'slider', 'Min', 1, 'Max', 10, 'SliderStep', [1/9 1/9], 'Value', 1, ...
-        'Callback', @speedSliderCallback);
-end
-
-function speedSliderCallback(src, event)
-    % display arguments
-    disp(src); disp(event);
+        'Style', 'slider', 'Min', 1, 'Max', 10, 'SliderStep', [1/9 1/9], 'Value', 1);
 end
 
 function updateDatesIfControlsValuesAreValid(editControl, ~)
@@ -99,7 +93,6 @@ function updateStartDate( container )
     month = str2double(get(container.UserData.monthControl,'String'));
     day = str2double(get(container.UserData.dayControl,'String'));
     container.UserData.startDate = datetime(year, month, day);
-    disp(container.UserData.startDate);
 end
 
 function resetCurrentDate( container )
