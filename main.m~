@@ -21,13 +21,14 @@ function main()
     %% Start planets animation
     startTimeTimer(mainFigure);
     planetData.name = 'Země';
-    planetData.a = 1.00000261;
-    planetData.e = 0.01671123;
-    planetData.i = -0.00001531;
+    planetData.a = 1.00000261
     planetData.L = 100.46457166;
-    planetData.Ldot = 35999.37244981;
+    planetData.M0 = planetData.L - 102.93768193;
+    planetData.e = 0.01671123;
     planetData.omegaDash = 102.93768193;
+    planetData.i = -0.00001531;
     planetData.Omega = 0;
+    planetData.n = 35999.37244981;
     addPlanetTimer(mainFigure, planetData, 1 );
     drawnow();
     start(mainFigure.UserData.planetTimers);

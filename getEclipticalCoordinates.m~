@@ -1,8 +1,8 @@
-function [ X, Y, Z ] = getEclipticalCoordinates( t, t0, a, L, e, omegaDash, i, Omega, Ldot )
-    M0 = L - omegaDash;
-    n = Ldot;
+function [ X, Y, Z ] = getEclipticalCoordinates( t, t0, a, M0, e, omegaDash, i, Omega, n )
     % http://physics.muni.cz/~hroch/kepler.pdf
     % 1
+    M0 = 100.46457166 - omegaDash;
+    n = 35999.37244981
     %M = M0 + n*(t-t0);
     M = M0 + (n*(t-t0)/36525);
     

@@ -23,7 +23,7 @@ function planetTimerFcn( planetTimer, ~ )
     t = juliandate(t);
     t0 = 2453560;
     % compute and add coordinates for current date
-    [X, Y, Z] = getEclipticalCoordinates(t, t0, planetData.a, planetData.M0, planetData.e, planetData.omegaDash, planetData.i, planetData.Omega, planetData.n);
+    [X, Y, Z] = getEclipticalCoordinates(t, t0, planetData.a, planetData.L, planetData.e, planetData.omegaDash, planetData.i, planetData.Omega, planetData.Ldot);
     clearpoints(planetData.planetLine);
     addpoints(planetData.planetLine, X, Y, Z);
 end
