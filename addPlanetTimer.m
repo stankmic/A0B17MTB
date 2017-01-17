@@ -10,10 +10,8 @@ end
 
 function [ planetLine ] = addPlanetAnimatedLine( planetData )
     % create line
-    planetLine = animatedline('Marker', 'o', 'Color', 'red');
+    planetLine = animatedline('Marker', 'o', 'Color', planetData.color);
     addpoints(planetLine, 0, 0, 0);
-    % add legend
-    legend(planetData.name, 'Location', 'southeast');
 end
 
 function planetTimerFcn( planetTimer, ~ )

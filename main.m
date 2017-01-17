@@ -21,6 +21,7 @@ function main()
     %% Start planets animation
     startTimeTimer(mainFigure);
     planetData.name = 'Země';
+    planetData.color = 'blue';
     planetData.a = 1.00000261;
     planetData.e = 0.01671123;
     planetData.i = -0.00001531;
